@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+</head>
+<body>
+    <h1>Contact Form Messages</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <br><br>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg['Name'] }}</td>
+            <td>{{ msg['Email'] }}</td>
+            <td>{{ msg['Message'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
